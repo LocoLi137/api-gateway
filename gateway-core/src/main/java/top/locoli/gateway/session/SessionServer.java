@@ -25,7 +25,7 @@ public class SessionServer implements Callable<Channel> {
     private Channel channel;
 
     @Override
-    public Channel call() throws Exception {
+    public Channel call(){
         ChannelFuture channelFuture = null;
         try {
             ServerBootstrap b = new ServerBootstrap();

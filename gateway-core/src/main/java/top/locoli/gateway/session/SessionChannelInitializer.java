@@ -11,7 +11,7 @@ import io.netty.handler.codec.http.HttpResponseEncoder;
 public class SessionChannelInitializer extends ChannelInitializer<SocketChannel> {
 
     @Override
-    protected void initChannel(SocketChannel channel) throws Exception {
+    protected void initChannel(SocketChannel channel){
         ChannelPipeline line = channel.pipeline();
         line.addLast(new HttpRequestDecoder());
         line.addLast(new HttpResponseEncoder());
